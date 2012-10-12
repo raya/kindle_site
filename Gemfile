@@ -6,7 +6,8 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'bootstrap-sass', '2.1.0.0'
+gem "high_voltage", "~> 0.9.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,8 +26,12 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
-group :development do
+group :development, :test do
   gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara', '~>1.1.2'
 end
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
