@@ -8,7 +8,7 @@ describe "Static pages" do
 
     it { should have_selector('title', text: "Blog2Kindle") }
     it { should have_selector('h1',    text: "Blog Posts to Kindle") }
-    it { should have_selector('h3',    text: "Read blog posts on your kindle.") }
+    it { should have_selector('p',     text: "Download posts from your" )} 
 
     it "should have the correct layout links" do
       visit root_path
