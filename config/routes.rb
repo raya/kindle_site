@@ -1,4 +1,8 @@
 KindleSite::Application.routes.draw do
+  
+  resources :users
+  match 'signup' => "users#new"
+
   root to: 'high_voltage/pages#show', id: 'index'
   match '/:about' => 'high_voltage/pages#show', :id => 'about'
   match '/:home' => 'high_voltage/pages#show', :id => 'index'

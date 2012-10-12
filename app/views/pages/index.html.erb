@@ -1,9 +1,19 @@
 <title>Blog2Kindle</title>
 
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="navbar-form pull-right">
+        Test
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="hero-unit">
   <h1>Blog Posts to Kindle</h1>
   <p>Download posts from your favorite blogs and read them on your kindle.</p>
+  <%= link_to "Sign up", signup_path, class: "btn btn-primary btn-large" %>
 </div>
 <%= link_to 'Home', page_path('index') %>
 <%= link_to 'About', page_path('about') %>
