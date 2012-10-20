@@ -1,0 +1,29 @@
+<h1>Enter in Params</h1>
+<div class="row">
+  <div class="span6 offset3" %>
+
+  <%= form_for @site_arg do |f| %>
+
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+
+    <%= f.label :max_entries %>
+    <%= f.text_field :max_entries %>
+
+    <%= f.label :next_post %>
+    <%= f.text_field :next_post %>
+
+    <%= f.label :post_matcher %>
+    <%= f.text_field :post_matcher %>
+
+    <%= f.label :starting_page %>
+    <%= f.text_field :starting_page %>
+
+    <%= f.label :starting_page_inc %>
+    <%= f.text_field :starting_page_inc %>
+
+    <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+  <% end %>
+
+  </div>
+</div>
