@@ -1,29 +1,53 @@
 <h1>Enter in Params</h1>
 <div class="row">
-  <div class="span6 offset3" %>
+  <div class="span6" %>
 
     <%= form_for @site_arg, html: { class: "form-horizontal" } do |f| %>
+    
+    <div class="control-group">
+      <%= f.label :url, class: "control-label" %>
+      <div class="controls">
+        <%= f.text_field :url %>
+      </div>
+    </div>
 
-    <%= f.label :url %>
-    <%= f.text_field :url %>
+     <div class="control-group">
+       <%= f.label :max_entries, class: "control-label" %>
+       <div class="controls">
+         <%= f.text_field :max_entries %>
+       </div>
+     </div>
 
-    <%= f.label :max_entries %>
-    <%= f.text_field :max_entries %>
+     <div class="control-group">
+       <%= f.label :post_matcher, class: "control-label" %>
+       <div class="controls">
+         <%= f.text_field :post_matcher %>
+       </div>
+     </div>
 
-    <%= f.label :next_post %>
-    <%= f.text_field :next_post %>
+     <div class="control-group">
+       <%= f.label :next_post, class: "control-label" %>
+       <div class="controls">
+         <%= f.text_field :next_post %>
+       </div>
+     </div>
 
-    <%= f.label :post_matcher %>
-    <%= f.text_field :post_matcher %>
+     <div class="control-group">
+       <%= f.label :starting_page, class: "control-label" %>
+       <div class="controls">
+         <%= f.text_field :starting_page %>
+       </div>
+     </div>
 
-    <%= f.label :starting_page %>
-    <%= f.text_field :starting_page %>
+     <div class="control-group">
+       <%= f.label :starting_page_inc, class: "control-label" %>
+       <div class="controls">
+         <%= f.text_field :starting_page %>
+         <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+       </div>
+     </div>
 
-    <%= f.label :starting_page_inc %>
-    <%= f.text_field :starting_page_inc %>
-
-    <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
-  <% end %>
+    <% end %>
 
   </div>
 </div>
