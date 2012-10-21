@@ -2,51 +2,14 @@
 <div class="row">
   <div class="span6" %>
 
-    <%= form_for @site_arg, url: ebooks_path(@site_arg), html: { class: "form-horizontal" } do |f| %>
-    
-    <div class="control-group">
-      <%= f.label :url, class: "control-label" %>
+    <%= form_for @ebook, html: { class: "form-horizontal" } do |f| %>
+      <%= f.fields_for :site_arg do |builder| %>  
+        <%= render 'site_arg_fields', f: builder %>
+      <% end %>
+
       <div class="controls">
-        <%= f.text_field :url %>
+        <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
       </div>
-    </div>
-
-     <div class="control-group">
-       <%= f.label :max_entries, class: "control-label" %>
-       <div class="controls">
-         <%= f.text_field :max_entries %>
-       </div>
-     </div>
-
-     <div class="control-group">
-       <%= f.label :post_matcher, class: "control-label" %>
-       <div class="controls">
-         <%= f.text_field :post_matcher %>
-       </div>
-     </div>
-
-     <div class="control-group">
-       <%= f.label :next_post, class: "control-label" %>
-       <div class="controls">
-         <%= f.text_field :next_post %>
-       </div>
-     </div>
-
-     <div class="control-group">
-       <%= f.label :starting_page, class: "control-label" %>
-       <div class="controls">
-         <%= f.text_field :starting_page %>
-       </div>
-     </div>
-
-     <div class="control-group">
-       <%= f.label :starting_page_inc, class: "control-label" %>
-       <div class="controls">
-         <%= f.text_field :starting_page %>
-         <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
-       </div>
-     </div>
-
     <% end %>
 
   </div>

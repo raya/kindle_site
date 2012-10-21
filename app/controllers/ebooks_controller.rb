@@ -1,12 +1,15 @@
 class EbooksController < ApplicationController
   def new
-    @site_arg = SiteArg.new
+    @ebook = Ebook.new
+    @ebook.site_arg = SiteArg.new
+
   end
 
   def create
-    @site_arg = Sitearg.new(params[:site_arg])
-    if @site_arg.save
-      redirect_to :root
+    @ebook = Ebook.new(params[:ebook])
+    @ebook.status = "SUBMITTED"
+    if @ebook.save
+      redirect_to :root, notice: "URL successfully submitted."
     else
       render 'new'
     end

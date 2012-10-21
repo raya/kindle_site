@@ -16,13 +16,14 @@
 
 class SiteArg < ActiveRecord::Base
   belongs_to :ebook
-  attr_accessible :filename, :max_entries, :next_post, :post_matcher, :starting_page, :starting_page_inc, :url
+  attr_accessible :max_entries, :next_post, :post_matcher, :starting_page,
+    :starting_page_inc, :url
 
-  validates :url, presence: true
-  validates :max_entries, presence: true, numericality: { only_integer: true }, length: { minimum: 1 }
-  validates :next_post, presence: true
-  validates :post_matcher, presence: true
-  validates :starting_page, presence: true
-  validates :starting_page_inc, presence: true, numericality: { only_integer: true }
+  #validates :url, presence: true
+  #validates :max_entries, presence: true, numericality: { only_integer: true }, length: { minimum: 1 }
+  #validates :next_post, presence: true
+  #validates :post_matcher, presence: true
+  #validates :starting_page, presence: true
+  #validates :starting_page_inc, presence: true, numericality: { only_integer: true }
 
 end
