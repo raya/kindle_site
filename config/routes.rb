@@ -2,9 +2,7 @@ KindleSite::Application.routes.draw do
   
 
   resources :users
-  resources :ebooks do
-    resources :site_args, only: [:create]
-  end
+  resources :ebooks
 
   match 'signup' => "users#new"
 

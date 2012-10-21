@@ -14,6 +14,8 @@ class Ebook < ActiveRecord::Base
   has_one :site_arg
 
   accepts_nested_attributes_for :site_arg
-
-
+ 
+  before_create do |ebook|
+   self.status = "SUBMITTED"
+  end 
 end
