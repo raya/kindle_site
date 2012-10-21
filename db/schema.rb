@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121020100020) do
+ActiveRecord::Schema.define(:version => 20121021033633) do
 
   create_table "ebooks", :force => true do |t|
     t.string   "location"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20121020100020) do
     t.string   "filename"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.integer  "ebook_id"
   end
 
 end

@@ -15,6 +15,7 @@
 #
 
 class SiteArg < ActiveRecord::Base
+  belongs_to :ebook
   attr_accessible :filename, :max_entries, :next_post, :post_matcher, :starting_page, :starting_page_inc, :url
 
   validates :url, presence: true

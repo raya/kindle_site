@@ -10,5 +10,6 @@
 #
 
 class Ebook < ActiveRecord::Base
+  has_one :site_arg
   attr_accessible :location, :status
 end
