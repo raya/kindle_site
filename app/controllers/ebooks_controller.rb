@@ -13,4 +13,8 @@ class EbooksController < ApplicationController
       render 'new'
     end
   end
+
+  def index
+    @ebooks = Ebook.all
+  end
 end

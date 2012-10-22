@@ -10,6 +10,7 @@
 #
 
 class Ebook < ActiveRecord::Base
+
   attr_accessible :site_arg_attributes 
   has_one :site_arg
 
@@ -18,4 +19,5 @@ class Ebook < ActiveRecord::Base
   before_create do |ebook|
    self.status = "SUBMITTED"
   end 
+
 end

@@ -13,8 +13,11 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #
+require 'open-uri' 
 
 class SiteArg < ActiveRecord::Base
+  
+
   belongs_to :ebook
   attr_accessible :max_entries, :next_post, :post_matcher, :starting_page,
     :starting_page_inc, :url
@@ -26,4 +29,13 @@ class SiteArg < ActiveRecord::Base
   validates :starting_page, presence: true, numericality: { only_integer: true }
   validates :starting_page_inc, presence: true, numericality: { only_integer: true }
 
+  def open_page
+    begin
+     puts "opening page"
+     page = Nokogiri::HTML(open(self.url).read)
+    rescue
+      puts "Failed opening page"
+      false
+    end
+  end
 end

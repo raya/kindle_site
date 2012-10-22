@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021033633) do
+ActiveRecord::Schema.define(:version => 20121022034057) do
 
   create_table "ebooks", :force => true do |t|
     t.string   "location"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121021033633) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "site_args", :force => true do |t|
+  create_table "scraper", :force => true do |t|
     t.string   "url"
     t.integer  "max_entries"
     t.string   "next_post"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(:version => 20121021033633) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.integer  "ebook_id"
+    t.string   "status"
+    t.text     "link_list"
+    t.text     "content"
   end
 
 end
