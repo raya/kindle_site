@@ -1,5 +1,5 @@
 <ul>
 <% @ebooks.each do |book| %>
-  <li><%= book.site_arg.url %> - <%= book.status %> </li>
+  <li><%= book.site.url %> - <%= book.status %> </li>
 <% end %>
 </ul>

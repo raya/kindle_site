@@ -4,8 +4,8 @@
 
     <%= form_for @ebook, html: { class: "form-horizontal" } do |f| %>
       <%= render 'shared/error_messages', :object => @ebook %>
-      <%= f.fields_for :site_arg do |builder| %>  
-        <%= render 'site_arg_fields', f: builder %>
+      <%= f.fields_for :site do |builder| %>  
+        <%= render 'site_fields', f: builder %>
       <% end %>
 
       <div class="controls">

@@ -11,10 +11,10 @@
 
 class Ebook < ActiveRecord::Base
 
-  attr_accessible :site_arg_attributes 
-  has_one :site_arg
+  attr_accessible :site_attributes 
+  has_one :site
 
-  accepts_nested_attributes_for :site_arg
+  accepts_nested_attributes_for :site
  
   before_create do |ebook|
    self.status = "SUBMITTED"

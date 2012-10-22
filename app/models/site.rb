@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: site_args
+# Table name: site
 #
 #  id                :integer          not null, primary key
 #  url               :string(255)
@@ -15,7 +15,7 @@
 #
 require 'open-uri' 
 
-class SiteArg < ActiveRecord::Base
+class Site < ActiveRecord::Base
   
 
   belongs_to :ebook

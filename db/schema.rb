@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022034057) do
+ActiveRecord::Schema.define(:version => 20121022034658) do
 
   create_table "ebooks", :force => true do |t|
     t.string   "location"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20121022034057) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "scraper", :force => true do |t|
+  create_table "sites", :force => true do |t|
     t.string   "url"
     t.integer  "max_entries"
     t.string   "next_post"

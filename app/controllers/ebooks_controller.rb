@@ -1,7 +1,7 @@
 class EbooksController < ApplicationController
   def new
     @ebook = Ebook.new
-    @ebook.site_arg = SiteArg.new
+    @ebook.site = Site.new
 
   end
 
