@@ -13,7 +13,8 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #
-require 'open-uri' 
+
+require 'open-uri'
 
 class Site < ActiveRecord::Base
   
@@ -29,13 +30,49 @@ class Site < ActiveRecord::Base
   validates :starting_page, presence: true, numericality: { only_integer: true }
   validates :starting_page_inc, presence: true, numericality: { only_integer: true }
 
-  def open_page
-    begin
-     puts "opening page"
-     page = Nokogiri::HTML(open(self.url).read)
-    rescue
-      puts "Failed opening page"
-      false
+  def open_page(current_url)
+    doc = Nokogiri::HTML(open(current_url))
+    #TODO if fail, update site table with status of failed
+  end
+
+  def process_site
+    @link_list = Array.new
+    current_url = self.url 
+    while post_limit_not_hit?
+      process_page(current_url)
+      current_url = get_next_page_url(current_url)
+    end
+    @link_list
+  end
+
+  def process_page(current_url)
+    current_page = open_page(current_url)
+    links = current_page.css(self.post_matcher).map do |link|
+      @link_list << link
+      break if post_limit_hit?
+    end 
+  end
+
+  def get_next_page_url(current_page)
+    if search_via_css?
+      page = open_page(current_page)
+      next_page = page.css(self.next_post)[0]['href']
+    else
+      addtl_url = addtl_url + self.starting_page_inc
+      next_page = self.url + "/" + self.next_post + addtl_url.to_s
     end
   end
+
+  def search_via_css?
+    self.starting_page_inc == -1
+  end
+
+  def post_limit_hit?
+    @link_list.length >= self.max_entries
+  end
+
+  def post_limit_not_hit?
+    !post_limit_hit?
+  end
+
 end
