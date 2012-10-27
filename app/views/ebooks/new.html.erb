@@ -5,6 +5,7 @@
     <%= form_for @ebook, html: { class: "form-horizontal" } do |f| %>
       <%= render 'shared/error_messages', :object => @ebook %>
       <%= f.fields_for :site do |builder| %>  
+        <%= render 'type_field', f: builder %>
         <%= render 'site_fields', f: builder %>
       <% end %>
 

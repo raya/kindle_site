@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022034658) do
+ActiveRecord::Schema.define(:version => 20121027084033) do
 
   create_table "ebooks", :force => true do |t|
     t.string   "location"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20121022034658) do
     t.string   "status"
     t.text     "link_list"
     t.text     "content"
+    t.string   "search_type"
   end
 
 end

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: site
+# Table name: sites
 #
 #  id                :integer          not null, primary key
 #  url               :string(255)
@@ -12,6 +12,11 @@
 #  filename          :string(255)
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  ebook_id          :integer
+#  status            :string(255)
+#  link_list         :text
+#  content           :text
+#  search_type       :string(255)
 #
 
 require 'open-uri'
@@ -23,6 +28,7 @@ class Site < ActiveRecord::Base
   attr_accessible :max_entries, :next_post, :post_matcher, :starting_page,
     :starting_page_inc, :url
 
+  validates :search_type, presence: true
   validates :url, presence: true
   validates :max_entries, presence: true, numericality: { only_integer: true }, length: { minimum: 1 }
   validates :next_post, presence: true
@@ -58,6 +64,7 @@ class Site < ActiveRecord::Base
       page = open_page(current_page)
       next_page = page.css(self.next_post)[0]['href']
     else
+      #not working
       addtl_url = addtl_url + self.starting_page_inc
       next_page = self.url + "/" + self.next_post + addtl_url.to_s
     end
