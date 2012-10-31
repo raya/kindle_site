@@ -26,7 +26,7 @@ class Site < ActiveRecord::Base
 
   belongs_to :ebook
   attr_accessible :max_entries, :next_post, :post_matcher, :starting_page,
-    :starting_page_inc, :url, :search_type, :link_list
+    :starting_page_inc, :url, :search_type
 
   serialize :link_list, Array
 
@@ -58,14 +58,17 @@ class Site < ActiveRecord::Base
 
   def process_page(current_url)
     logger.debug "Running process page"
+    logger.debug "Opening current_url #{current_url}"
     current_page = open_page(current_url)
     links = current_page.css(self.post_matcher).map do |link|
-      @link_list << link
+      @link_list << link['href']
       break if post_limit_hit?
     end 
-    update_attributes(:link_list => @link_list)
+    update_attribute(:link_list, @link_list)
+    #update_attributes(:status => "GO")
     #self.link_list = @link_list
     @link_list
+    logger.debug "FInal @link_list contains #{@link_list}"
   end
 
   def get_next_page_url(current_page)
