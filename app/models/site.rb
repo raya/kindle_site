@@ -26,8 +26,11 @@ class Site < ActiveRecord::Base
 
   belongs_to :ebook
   attr_accessible :max_entries, :next_post, :post_matcher, :starting_page,
-    :starting_page_inc, :url, :search_type
+    :starting_page_inc, :url, :search_type, :link_list
 
+  serialize :link_list, Array
+
+  
   SEARCH_TYPES = ["CSS", "URL"]
   validates :search_type, presence: true, inclusion: { in: SEARCH_TYPES }
   validates :url, presence: true
@@ -43,6 +46,7 @@ class Site < ActiveRecord::Base
   end
 
   def process_site
+    logger.debug "Running process site"
     @link_list = Array.new
     current_url = self.url 
     while post_limit_not_hit?
@@ -53,11 +57,15 @@ class Site < ActiveRecord::Base
   end
 
   def process_page(current_url)
+    logger.debug "Running process page"
     current_page = open_page(current_url)
     links = current_page.css(self.post_matcher).map do |link|
       @link_list << link
       break if post_limit_hit?
     end 
+    update_attributes(:link_list => @link_list)
+    #self.link_list = @link_list
+    @link_list
   end
 
   def get_next_page_url(current_page)
@@ -72,7 +80,7 @@ class Site < ActiveRecord::Base
   end
 
   def search_via_css?
-    self.starting_page_inc == -1
+    self.search_type == "CSS" 
   end
 
   def post_limit_hit?
