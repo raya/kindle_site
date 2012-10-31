@@ -61,7 +61,7 @@ class Site < ActiveRecord::Base
     logger.debug "Opening current_url #{current_url}"
     current_page = open_page(current_url)
     links = current_page.css(self.post_matcher).map do |link|
-      @link_list << link['href']
+      @link_list << link['href'].to_s
       break if post_limit_hit?
     end 
     update_attribute(:link_list, @link_list)
