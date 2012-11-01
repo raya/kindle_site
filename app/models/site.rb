@@ -23,14 +23,12 @@ require 'open-uri'
 
 class Site < ActiveRecord::Base
   
-
   belongs_to :ebook
   attr_accessible :max_entries, :next_post, :post_matcher, :starting_page,
     :starting_page_inc, :url, :search_type
 
   serialize :link_list, Array
 
-  
   SEARCH_TYPES = ["CSS", "URL"]
   validates :search_type, presence: true, inclusion: { in: SEARCH_TYPES }
   validates :url, presence: true
