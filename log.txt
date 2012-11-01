@@ -1,0 +1,297 @@
+# Logfile created on 2012-11-01 13:30:45 +0700 by logger.rb/31641
+Running output_file
+Writing html_headers
+Writing html_headers completed
+Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_46ec75c840c150b296417b58b7.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_46ec75c840c150b296417b58b7.html
+Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_db2624bd54a16d488a7c17d7ee.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_db2624bd54a16d488a7c17d7ee.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_db2624bd54a16d488a7c17d7ee.html on index 0
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_db2624bd54a16d488a7c17d7ee.html on index 1
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/02/updates-to-google-reader-app-for.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_db2624bd54a16d488a7c17d7ee.html on index 2
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/01/more-control-over-comments-on-shared.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_db2624bd54a16d488a7c17d7ee.html on index 3
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2010/11/android-google-reader-app-is-here.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_db2624bd54a16d488a7c17d7ee.html on index 4
+Write file completed
+Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_776bdcc9802ef47480ab5b4696.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_776bdcc9802ef47480ab5b4696.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_776bdcc9802ef47480ab5b4696.html on index 0
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_776bdcc9802ef47480ab5b4696.html on index 1
+Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_81278cfa05c49dc038e76dfb37.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_81278cfa05c49dc038e76dfb37.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_81278cfa05c49dc038e76dfb37.html on index 0
+Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_ef52de914da92d2f058b23d0df.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_ef52de914da92d2f058b23d0df.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_ef52de914da92d2f058b23d0df.html on index 0
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_ef52de914da92d2f058b23d0df.html on index 1
+Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_81f1c0199abdcc0baddda45b73.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_81f1c0199abdcc0baddda45b73.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_81f1c0199abdcc0baddda45b73.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_81f1c0199abdcc0baddda45b73.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_c27ec883107b9599af0c6d344d.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_c27ec883107b9599af0c6d344d.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_c27ec883107b9599af0c6d344d.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_c27ec883107b9599af0c6d344d.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_4cb8d435d70b57d260c2b66ac5.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_4cb8d435d70b57d260c2b66ac5.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_4cb8d435d70b57d260c2b66ac5.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Initializing Readability object
+Readability object successfully initialized
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_4cb8d435d70b57d260c2b66ac5.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Initializing Readability object
+Readability object successfully initialized
+Content Extractor app created
+---------Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_0df13b71c2c0bb8b493798ad6c.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_0df13b71c2c0bb8b493798ad6c.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_0df13b71c2c0bb8b493798ad6c.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Initializing Readability object
+Readability object successfully initialized
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_0df13b71c2c0bb8b493798ad6c.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Initializing Readability object
+Readability object successfully initialized
+Content Extractor app created
+---------Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_dfd812293b51e05464714ea98f.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_dfd812293b51e05464714ea98f.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_dfd812293b51e05464714ea98f.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Initializing Readability object
+Readability object successfully initialized
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_dfd812293b51e05464714ea98f.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Initializing Readability object
+Readability object successfully initialized
+Content Extractor app created
+---------Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_978c3679f3b2b11869e1c446fc.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_978c3679f3b2b11869e1c446fc.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_978c3679f3b2b11869e1c446fc.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_978c3679f3b2b11869e1c446fc.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+---------Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_ae507c79f15b405ba9c0482d45.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_ae507c79f15b405ba9c0482d45.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_ae507c79f15b405ba9c0482d45.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_ae507c79f15b405ba9c0482d45.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+---------Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_b6b66fd4827811884592d52ac7.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_b6b66fd4827811884592d52ac7.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_b6b66fd4827811884592d52ac7.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_b6b66fd4827811884592d52ac7.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+---------Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_9148778c495091926459fbccf6.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_9148778c495091926459fbccf6.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_9148778c495091926459fbccf6.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_9148778c495091926459fbccf6.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/02/updates-to-google-reader-app-for.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_9148778c495091926459fbccf6.html on index 2
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/01/more-control-over-comments-on-shared.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_9148778c495091926459fbccf6.html on index 3
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2010/11/android-google-reader-app-is-here.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_9148778c495091926459fbccf6.html on index 4
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Writing html_ending
+Finished /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_9148778c495091926459fbccf6.html
+---------Running output_file
+Writing html_headers to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_5caaa071c68b8a54d1c0b411d0.html
+Writing html_headers completed
+Creating TOC completed for /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_5caaa071c68b8a54d1c0b411d0.html
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/new-in-reader-fresh-design-and-google.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_5caaa071c68b8a54d1c0b411d0.html on index 0
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/10/upcoming-changes-to-reader-new-look-new.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_5caaa071c68b8a54d1c0b411d0.html on index 1
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/02/updates-to-google-reader-app-for.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_5caaa071c68b8a54d1c0b411d0.html on index 2
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2011/01/more-control-over-comments-on-shared.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_5caaa071c68b8a54d1c0b411d0.html on index 3
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Beginning write_file
+Writing http://googlereader.blogspot.com/2010/11/android-google-reader-app-is-here.html to /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_5caaa071c68b8a54d1c0b411d0.html on index 4
+About to open output file
+Source page read
+Creating new ContentExtractor object
+Content Extractor app created
+Finished writing content
+Write file completed
+Writing html_ending
+Finished /Users/rayalynn/Dropbox/Code/kindle_site/tmp/html_files/temp_5caaa071c68b8a54d1c0b411d0.html

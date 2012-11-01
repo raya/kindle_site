@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'nokogiri'
 gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
@@ -8,7 +9,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'bootstrap-sass', '2.1.0.0'
 gem "high_voltage", "~> 0.9.0"
-gem 'nokogiri'
+
 gem 'ruby-readability', :git => 'https://github.com/iterationlabs/ruby-readability.git'
 # Gems used only for assets and not required
 # in production environments by default.

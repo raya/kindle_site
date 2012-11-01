@@ -65,10 +65,6 @@ class Site < ActiveRecord::Base
       break if post_limit_hit?
     end 
     update_attribute(:link_list, @link_list)
-    #update_attributes(:status => "GO")
-    #self.link_list = @link_list
-    @link_list
-    logger.debug "FInal @link_list contains #{@link_list}"
   end
 
   def get_next_page_url(current_page)
