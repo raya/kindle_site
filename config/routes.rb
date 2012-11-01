@@ -3,7 +3,13 @@ KindleSite::Application.routes.draw do
 
   resources :users
   resources :ebooks
-  resources :sites
+
+  resources :sites do
+    member do
+      get 'harvest'
+      get 'create_file'
+    end
+  end
 
   match 'signup' => "users#new"
 

@@ -88,4 +88,9 @@ class Site < ActiveRecord::Base
     !post_limit_hit?
   end
 
+  def create_html_file
+    TrogScraper::HtmlGenerator.create_html_file(self.link_list)
+  end
+
+
 end
