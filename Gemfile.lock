@@ -6,6 +6,14 @@ GIT
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
 
+GIT
+  remote: https://github.com/iterationlabs/ruby-readability.git
+  revision: 54921e107aed2a3096bb05a739188f339225aab1
+  specs:
+    ruby-readability (0.5.5)
+      guess_html_encoding (>= 0.0.4)
+      nokogiri (>= 1.4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +70,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.1.1)
+    guess_html_encoding (0.0.6)
     high_voltage (0.9.4)
     hike (1.2.1)
     i18n (0.6.1)
@@ -161,5 +170,6 @@ DEPENDENCIES
   pg
   rails (= 3.2.8)
   rspec-rails
+  ruby-readability!
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
