@@ -43,20 +43,44 @@ class Site < ActiveRecord::Base
     #TODO if fail, update site table with status of failed
   end
 
+  #def process_site
+    #logger.debug "Running process site"
+    #@link_list = Array.new
+    #current_url = self.url 
+    #while post_limit_not_hit?
+      #process_page(current_url)
+      #current_url = get_next_url(current_url)
+    #end
+    #@link_list
+  #end
+
   def process_site
-    logger.debug "Running process site"
+    self.search_type == "CSS" ? process_css : process_url
+  end
+
+  def process_css
     @link_list = Array.new
-    current_url = self.url 
+    current_url = self.url
     while post_limit_not_hit?
       process_page(current_url)
-      current_url = get_next_page_url(current_url)
+      page = open_page(current_url)
+      current_url = page.css(self.next_post)[0]['href']
     end
-    @link_list
+  end
+
+  def process_url
+    @starting_page = self.starting_page
+    @link_list = Array.new
+
+    while post_limit_not_hit?
+      current_url = self.url + "/" + self.next_post + @starting_page.to_s
+      logger.debug "Processing as URL #{current_url}"
+      process_page(current_url)  
+      @starting_page += self.starting_page_inc
+    end
   end
 
   def process_page(current_url)
-    logger.debug "Running process page"
-    logger.debug "Opening current_url #{current_url}"
     current_page = open_page(current_url)
     links = current_page.css(self.post_matcher).map do |link|
       @link_list << link['href'].to_s
@@ -65,12 +89,13 @@ class Site < ActiveRecord::Base
     update_attribute(:link_list, @link_list)
   end
 
-  def get_next_page_url(current_page)
+  #gets the next page to process
+  def get_next_url(current_page)
     if search_via_css?
       page = open_page(current_page)
       next_page = page.css(self.next_post)[0]['href']
     else
-      #not working
+       
       addtl_url = addtl_url + self.starting_page_inc
       next_page = self.url + "/" + self.next_post + addtl_url.to_s
     end
