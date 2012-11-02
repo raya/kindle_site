@@ -8,6 +8,7 @@ class EbooksController < ApplicationController
   def create
     @ebook = Ebook.new(params[:ebook])
     if @ebook.save
+      @ebook.site.delay(queue: 'links').gather_links
       redirect_to :root, notice: "URL successfully submitted."
     else
       render 'new'

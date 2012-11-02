@@ -43,7 +43,7 @@ class Site < ActiveRecord::Base
     #TODO if fail, update site table with status of failed
   end
 
-  def process_site
+  def gather_links 
     self.search_type == "CSS" ? process_css : process_url
   end
 
@@ -66,7 +66,6 @@ class Site < ActiveRecord::Base
       starting_page += self.starting_page_inc
     end
   end
-
 
   def process_page(current_url)
     current_page = open_page(current_url)
