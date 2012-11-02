@@ -74,7 +74,6 @@ class Site < ActiveRecord::Base
 
     while post_limit_not_hit?
       current_url = self.url + "/" + self.next_post + @starting_page.to_s
-      logger.debug "Processing as URL #{current_url}"
       process_page(current_url)  
       @starting_page += self.starting_page_inc
     end
