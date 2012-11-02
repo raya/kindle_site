@@ -67,6 +67,7 @@ class Site < ActiveRecord::Base
     end
   end
 
+
   def process_page(current_url)
     current_page = open_page(current_url)
     links = current_page.css(self.post_matcher).map do |link|
