@@ -43,17 +43,6 @@ class Site < ActiveRecord::Base
     #TODO if fail, update site table with status of failed
   end
 
-  #def process_site
-    #logger.debug "Running process site"
-    #@link_list = Array.new
-    #current_url = self.url 
-    #while post_limit_not_hit?
-      #process_page(current_url)
-      #current_url = get_next_url(current_url)
-    #end
-    #@link_list
-  #end
-
   def process_site
     self.search_type == "CSS" ? process_css : process_url
   end
@@ -69,13 +58,12 @@ class Site < ActiveRecord::Base
   end
 
   def process_url
-    @starting_page = self.starting_page
     @link_list = Array.new
-
+    starting_page = self.starting_page
     while post_limit_not_hit?
-      current_url = self.url + "/" + self.next_post + @starting_page.to_s
+      current_url = self.url + "/" + self.next_post + starting_page.to_s
       process_page(current_url)  
-      @starting_page += self.starting_page_inc
+      starting_page += self.starting_page_inc
     end
   end
 
