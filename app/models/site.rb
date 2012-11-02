@@ -104,5 +104,12 @@ class Site < ActiveRecord::Base
     TrogScraper::HtmlGenerator.create_html_file(self.link_list)
   end
 
+  def success(job)
+    logger.info "Job #{job.id} successfully run."
+  end
+
+  def error(job, exception)
+    logger.debug "Error in job #{job.id} - #{exception}"
+  end
 
 end
