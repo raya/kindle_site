@@ -45,6 +45,10 @@ class Site < ActiveRecord::Base
 
   def gather_links 
     self.search_type == "CSS" ? process_css : process_url
+    #if link gathering successful, create html file
+    if !self.link_list.blank?
+      TrogScraper::HtmlGenerator.create_file(self.link_list)
+    end
   end
 
   def process_css
@@ -101,11 +105,11 @@ class Site < ActiveRecord::Base
   end
 
   def create_html_file
-    TrogScraper::HtmlGenerator.create_html_file(self.link_list)
+    TrogScraper::HtmlGenerator.create_file(self.link_list)
   end
 
   def success(job)
-    logger.info "Job #{job.id} successfully run."
+    logger.info "Job #{job.id} successfully run. Calling create_html_file."
   end
 
   def error(job, exception)

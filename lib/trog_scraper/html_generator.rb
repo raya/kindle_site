@@ -36,11 +36,8 @@ module TrogScraper
       end
     end
 
-    def self.test(link_list)
-      link_list
-    end
-
-    def self.create_html_file(link_list)
+    def self.create_file(link_list)
+      puts "Creating file in TrogScraper"
       output_file = random_filename
       write_html_headers(output_file)
       create_toc(output_file, link_list.length)
