@@ -1,5 +1,24 @@
-<ul>
-<% @ebooks.each do |book| %>
-  <li><%= book.site.url %> - <%= book.status %> </li>
-<% end %>
-</ul>
+<h1>Ebook#Index</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>URL</th>
+      <th>HTML File</th>
+      <th>Ebook</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ebooks.each do |ebook| %>
+      <tr>
+        <td><%= ebook.site.id %></td>
+        <td><%= ebook.site.url %></td>
+        <td><%= link_to 'Download', ebook.site.filename %></td>
+        <td><%= link_to 'Download', ebook.location %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+

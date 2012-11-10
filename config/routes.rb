@@ -5,6 +5,7 @@ KindleSite::Application.routes.draw do
   resources :ebooks
 
   resources :sites do
+    #for testing-remove in prod
     member do
       get 'harvest'
       get 'create_file'
