@@ -32,6 +32,10 @@ class Ebook < ActiveRecord::Base
   end
 
   def default_filename
-    name = self.site.url + '.mobi'
+    #strip blog so only base_url available
+    #remove http and .s
+    name = self.site.url
+    name.sub!(/^https?:\/\//,'')
+    name.sub!(/\./,'-') + '.mobi'
   end
 end
