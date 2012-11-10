@@ -19,4 +19,12 @@ class Ebook < ActiveRecord::Base
    self.status = "SUBMITTED"
   end 
 
+  def create_mobi_file
+    logger.info "Creating mobi file"
+    logger.info "Puts site filename is #{self.site.filename}"
+    puts "Running #{Settings.kindlegen_path}/kindlegen #{self.site.filename}"
+    logger.info "Running #{Settings.kindlegen_path}/kindlegen #{self.site.filename}"
+    `#{Settings.kindlegen_path}/kindlegen #{self.site.filename}`
+    logger.info "Mobi file created."
+  end
 end

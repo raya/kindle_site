@@ -27,6 +27,9 @@ class Site < ActiveRecord::Base
   attr_accessible :max_entries, :next_post, :post_matcher, :starting_page,
     :starting_page_inc, :url, :search_type
 
+  #PROBLEM TODO - multiple ebooks may be created
+  after_update :create_ebook, :if => :html_file_created?
+
   serialize :link_list, Array
 
   SEARCH_TYPES = ["CSS", "URL"]
@@ -43,12 +46,20 @@ class Site < ActiveRecord::Base
     #TODO if fail, update site table with status of failed
   end
 
+  def html_file_created?
+    return true if !self.filename.blank?
+  end
+
+  def create_ebook 
+    logger.info "Calling Ebook's create_mobi_file"
+    self.ebook.create_mobi_file
+  end
+
   def gather_links 
     self.search_type == "CSS" ? process_css : process_url
     #if link gathering successful, create html file
     if !self.link_list.blank?
       file_location = TrogScraper::HtmlGenerator.create_file(self.link_list)
-      puts "File location is #{file_location}"
       update_attribute(:filename, file_location)
     end
   end
@@ -111,7 +122,7 @@ class Site < ActiveRecord::Base
   end
 
   def success(job)
-    logger.info "Job #{job.id} successfully run. Calling create_html_file."
+    logger.info "Job #{job.id} successfully run."
   end
 
   def error(job, exception)
