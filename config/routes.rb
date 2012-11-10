@@ -2,13 +2,18 @@ KindleSite::Application.routes.draw do
   
 
   resources :users
-  resources :ebooks
+  resources :ebooks do
+    member do
+      get 'download'
+    end
+  end
 
   resources :sites do
     #for testing-remove in prod
     member do
       get 'harvest'
       get 'create_file'
+      get 'download'
     end
   end
 

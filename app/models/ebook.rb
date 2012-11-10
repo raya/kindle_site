@@ -15,7 +15,6 @@ class Ebook < ActiveRecord::Base
   has_one :site
 
   accepts_nested_attributes_for :site
- 
   before_create do |ebook|
    self.status = "SUBMITTED"
   end 

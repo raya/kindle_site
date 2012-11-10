@@ -12,10 +12,18 @@
   <tbody>
     <% @ebooks.each do |ebook| %>
       <tr>
-        <td><%= ebook.site.id %></td>
+        <td><%= ebook.id %></td>
         <td><%= ebook.site.url %></td>
-        <td><%= link_to 'Download', ebook.site.filename %></td>
-        <td><%= link_to 'Download', ebook.location %></td>
+        <% if ebook.site.filename.blank? %>
+          <td>Unavailable</td>
+        <% else %>
+          <td><%= link_to 'Download', download_site_path(ebook.site.id) %></td>
+        <% end %>
+        <% if ebook.location.blank? %>
+          <td>Unavailable</td>
+        <% else %>
+          <td><%= link_to 'Download', download_ebook_path(ebook.id) %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

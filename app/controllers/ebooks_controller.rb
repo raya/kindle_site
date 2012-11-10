@@ -18,4 +18,11 @@ class EbooksController < ApplicationController
   def index
     @ebooks = Ebook.all
   end
+
+  def download
+    @ebook = Ebook.find(params[:id])
+    if !@ebook.location.blank?
+      send_file "#{Rails.root}/app/assets/documents/#{@ebook.location}", :type => 'text/html', :filename => @ebook.location
+    end 
+  end
 end
