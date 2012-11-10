@@ -15,7 +15,7 @@
 /tmp
 *.swp
 *.swo
-
+/app/assets/documents
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
