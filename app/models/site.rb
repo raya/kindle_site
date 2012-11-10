@@ -47,7 +47,9 @@ class Site < ActiveRecord::Base
     self.search_type == "CSS" ? process_css : process_url
     #if link gathering successful, create html file
     if !self.link_list.blank?
-      TrogScraper::HtmlGenerator.create_file(self.link_list)
+      file_location = TrogScraper::HtmlGenerator.create_file(self.link_list)
+      puts "File location is #{file_location}"
+      update_attribute(:filename, file_location)
     end
   end
 

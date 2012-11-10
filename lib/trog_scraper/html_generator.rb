@@ -37,15 +37,14 @@ module TrogScraper
     end
 
     def self.create_file(link_list)
-      puts "Creating file in TrogScraper"
       output_file = random_filename
       write_html_headers(output_file)
       create_toc(output_file, link_list.length)
       link_list.each_with_index do |link, index|
-        puts "Processing #{link}"
         write_file(link, output_file, index)
       end
       write_html_ending(output_file)
+      return output_file
     end
 
     def self.create_toc(filename, index)
