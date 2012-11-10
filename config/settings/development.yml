@@ -1,1 +1,2 @@
 kindlegen_path: "~/documents/kindlegen"
+tmp_path: <%= "#{Rails.root}/tmp/html_files" %>

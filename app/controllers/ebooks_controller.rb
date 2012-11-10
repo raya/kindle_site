@@ -22,7 +22,8 @@ class EbooksController < ApplicationController
   def download
     @ebook = Ebook.find(params[:id])
     if !@ebook.location.blank?
-      send_file "#{Rails.root}/app/assets/documents/#{@ebook.location}", :type => 'text/html', :filename => @ebook.location
+      #send_file "#{@ebook.location}", :type => 'text/html', :filename => @ebook.location
+      send_file "#{@ebook.location}", :type => 'text/html', :filename => @ebook.default_filename 
     end 
   end
 end

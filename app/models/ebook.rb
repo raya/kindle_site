@@ -8,23 +8,30 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-
+#
+require 'fileutils'
 class Ebook < ActiveRecord::Base
-
   attr_accessible :site_attributes 
   has_one :site
-
   accepts_nested_attributes_for :site
+
+  STATUS_TYPES = ["SUBMITTED", "COMPLETE", "ERROR"]
   before_create do |ebook|
    self.status = "SUBMITTED"
   end 
 
   def create_mobi_file
-    logger.info "Creating mobi file"
-    logger.info "Puts site filename is #{self.site.filename}"
-    puts "Running #{Settings.kindlegen_path}/kindlegen #{self.site.filename}"
-    logger.info "Running #{Settings.kindlegen_path}/kindlegen #{self.site.filename}"
-    `#{Settings.kindlegen_path}/kindlegen #{self.site.filename}`
-    logger.info "Mobi file created."
+    t = Time.new
+    new_filename = "ebook_#{t.strftime("%Y%m%d_%H%M%L")}.mobi"
+    new_location = "#{Rails.root}/app/assets/documents/#{new_filename}"
+    `#{Settings.kindlegen_path}/kindlegen #{self.site.filename} -o #{new_filename}`
+    logger.info "File created. Moving file"
+    FileUtils.mv("#{Settings.tmp_path}/#{new_filename}", new_location) 
+    logger.info "File moved"
+    self.update_attributes({:status => "COMPLETED", :location => new_location }, :without_protection => true)
+  end
+
+  def default_filename
+    name = self.site.url + '.mobi'
   end
 end

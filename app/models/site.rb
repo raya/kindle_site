@@ -27,9 +27,6 @@ class Site < ActiveRecord::Base
   attr_accessible :max_entries, :next_post, :post_matcher, :starting_page,
     :starting_page_inc, :url, :search_type
 
-  #PROBLEM TODO - multiple ebooks may be created
-  after_update :create_ebook, :if => :html_file_created?
-
   serialize :link_list, Array
 
   SEARCH_TYPES = ["CSS", "URL"]
@@ -52,7 +49,7 @@ class Site < ActiveRecord::Base
 
   def create_ebook 
     logger.info "Calling Ebook's create_mobi_file"
-    self.ebook.create_mobi_file
+    self.ebook.create_mobi_file if html_file_created?
   end
 
   def gather_links 
@@ -61,6 +58,7 @@ class Site < ActiveRecord::Base
     if !self.link_list.blank?
       file_location = TrogScraper::HtmlGenerator.create_file(self.link_list)
       update_attribute(:filename, file_location)
+      create_ebook
     end
   end
 
@@ -115,10 +113,6 @@ class Site < ActiveRecord::Base
 
   def post_limit_not_hit?
     !post_limit_hit?
-  end
-
-  def create_html_file
-    TrogScraper::HtmlGenerator.create_file(self.link_list)
   end
 
   def success(job)
